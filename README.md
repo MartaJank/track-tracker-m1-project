@@ -55,6 +55,6 @@ The **MVP** will include:
 ​
 #### GitHub
 ​
-​
+[Project GitHub](https://github.com/MartaJank/track-tracker-m1-project)
 ​
 #### Slides
