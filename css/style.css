@@ -9,6 +9,25 @@ h1 {
     padding-bottom: 3rem;
 }
 
+.faq-title {
+    color: rgb(3, 221, 255);
+}
+
+.faq-play-button {
+    height: 10rem;
+}
+
+.faq-play-button:hover {
+    opacity: 0;
+}
+.fade {
+    background: #1c1c1c;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+  }
+
 .title-sul {
     color: rgb(3, 221, 255);
 }
@@ -68,7 +87,6 @@ nav > ul > li > a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .form-inputs {
@@ -92,6 +110,7 @@ nav > ul > li > a:hover {
 }
 
 input {
+    color: white;
     text-align: center;
     background: transparent;
     border: none;
@@ -100,20 +119,39 @@ input {
     padding-bottom: 0.5rem;
   }
   
-  ::-webkit-input-placeholder {
+    ::-webkit-input-placeholder {
     text-align: center;
     color: rgba(211, 211, 211, 0.77);
   }
   
-  :-moz-placeholder {
+    :-moz-placeholder {
     text-align: center;
   }
+
+.input-page {
+    height: 50rem;
+}
 
 main {
     background-color: #1c1c1c;
     color: white;
     display: inline-block;
     width: 100%;
+}
+
+.signup-option {
+    margin-top: 3rem;
+    margin-left: -1rem;
+}
+
+.signup-link {
+    padding-left: 6rem;
+    text-decoration: none;
+    color: rgb(3, 221, 255);
+}
+
+.signup-link:hover {
+    color: white;
 }
 
 footer {
@@ -127,15 +165,14 @@ footer {
     align-items: center;
 }
 
-
 .credits > p > a {
-    color: white;
+    color: rgb(3, 221, 255);
     font-size: 1rem;
     text-decoration: none;
 }
 
 .credits > p > a:hover {
-    color: rgb(3, 221, 255);
+    color: white;
     text-decoration: none;
 }
 
