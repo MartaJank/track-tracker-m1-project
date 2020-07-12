@@ -2,14 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Track Tracker - LogIn</title>
+        <title>Track Tracker - Sign Up</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="no-bootstrap">
         <header>
             <nav>
                 <div>
-                    <img src="img/logo.png" alt="Track Tracker Logo">
+                    <a href="index.html"><img src="img/logo.png" alt="Track Tracker Logo" class="logo-nav"></a>
                     <div>
                       <div class="burger-menu-icon" >
                         <span></span>
@@ -19,36 +20,36 @@
                       </div>
                     </div>
                   </div>
-                  <ul>
+                  <ul class="nav-list">
                     <li><a href="signup.html">Sign Up</a></li>
                     <li><a href="login.html">Login</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                   </ul>
             </nav>
-            <img src="img/logo2.png" alt="Track Tracker Logo">
         </header>
         <main>
-            <section>
-                <h2>Sign Up</h2>
+            <img src="img/logo3.png" alt="Track Tracker Logo" class="logo-page">
+            <section class="input-section">
+                <h2 class="title-sul">Sign Up</h2>
                 <div>
-                    <form action="">
+                    <form action="" class="form-inputs">
                         <input type="text" placeholder="Name">
                         <input type="email" placeholder="Email">
-                        <input type="password" placeholder="password">
+                        <input type="password" placeholder="Password">
                         <input type="password" placeholder="Repeat password">
-                        <button type="submit">Sign Up</button>
+                        <button type="submit" class="button-input">Sign Up</button>
                     </form>
                     <div class="message-container"></div>
                 </div>
             </section>
         </main>
         <footer>
-            <article>
+            <article class="credits">
                 <p>Powered by Marta J.</p>
                 <p>Logo generated with <a href="https://www.canva.com/" title="Logo Maker" target="_blank">Canva</a></p>
                 <p>Images <a href="http://www.freepik.com" target="_blank">Designed by Freepik</a></p>
             </article>
-            <a href="https://www.deezer.com/" target="_blank"><img src="img/deezer-logo.png" alt="deezer logo"></a>
+            <a href="https://www.deezer.com/" target="_blank"><img src="img/deezer-logo.png" alt="deezer logo" class="deezer-logo"></a>
         </footer>
         <script src="scripts/Signup.js"></script>
         <script src="scripts/User.js"></script>
