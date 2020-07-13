@@ -17,6 +17,17 @@ main {
     width: 100%;
 }
 
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    main {
+        width: 100%;
+        height: 500px;
+    }
+}
+
 @media (min-width: 320px) {
     h1 {
         font-size: 1rem;
@@ -75,6 +86,78 @@ main {
     -webkit-transition: opacity 1s ease-in-out;
   }
 
+  @media (max-width: 320px) {
+    .faq-main {
+        height: 100%;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .faq {
+        font-size: 0.7rem;
+    }
+    
+    .faq-play-button {
+        height: 4rem;
+        width: auto;
+    }
+}
+
+  @media (min-width: 320px) {
+    .faq-main {
+        height: 100%;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .faq {
+        font-size: 0.7rem;
+    }
+    
+    .faq-play-button {
+        height: 4rem;
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .faq {
+        font-size: 0.8rem;
+    }
+    .faq-play-button {
+        height: 7rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .faq-main {
+        height: 100%;
+    }
+    
+    .question {
+        font-size: 1.4rem;
+    }
+
+    .faq-play-button {
+        height: 10rem;
+    }
+
+    .faq-play-button:hover {
+        opacity: 0;
+    }
+    .fade {
+        background: #1c1c1c;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out;
+      }
+}
+
 /* No bootstrap pages width */
 .no-bootstrap {
     margin: 0;
@@ -119,6 +202,17 @@ nav > ul > li > a:hover {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+}
+
+@media (max-width: 320px) {
+    nav {
+        height: 4rem;
+    }
+
+    .logo-nav {
+        height: 100%;
+        margin-left: 1rem;
+    }
 }
 
 @media (min-width: 320px) {
@@ -203,17 +297,31 @@ nav > ul > li > a:hover {
 
 .logo-page {
     height: 200px;
-    padding-top: 2rem;
+    width: auto;
+    padding-top: 3rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+@media (min-width: 768px){
+    .logo-page {
+        height: 300px;
+        width: auto;
+        padding-top: 3rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .title-sul {
+    font-size: 1rem;
     color: rgb(3, 221, 255);
 }
 
 .input-section {
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,6 +332,74 @@ nav > ul > li > a:hover {
     width: 25rem;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 320px) {
+    .title-sul {
+        font-size: 1rem;
+    }
+    
+    .input-section {
+        font-size: 0.7rem;
+        display: block;
+        margin: auto;
+        max-width: 17rem;
+    }
+
+    .form-inputs {
+        width: 17rem;
+    }
+}
+
+@media (min-width: 320px) {
+    .title-sul {
+        font-size: 1rem;
+    }
+    
+    .input-section {
+        font-size: 0.7rem;
+        display: block;
+        margin: auto;
+        max-width: 17rem;
+    }
+
+    .form-inputs {
+        width: 17rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .title-sul {
+        font-size: 1.5rem;
+    }
+    
+    .input-section {
+        font-size: 1rem;
+        display: block;
+        margin: auto;
+        max-width: 25rem;
+    }
+
+    .form-inputs {
+        width: 25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-sul {
+        font-size: 1.8rem;
+    }
+
+    .input-section {
+        font-size: 1rem;
+        display: block;
+        margin: auto;
+        max-width: 30rem;
+    }
+
+    .form-inputs {
+        width: 30rem;
+    }
 }
 
 .button-input {
@@ -300,6 +476,92 @@ input {
     padding-bottom: 0.5rem;
 }
 
+@media (max-width: 320px) {
+    .signup-option {
+        font-size: 0.6rem;
+        display: block;
+        margin: auto;
+        padding-top: 1rem;
+        max-width: 16rem;
+    }
+
+    .message-container > p {
+        width: 17rem;
+        margin-top: 0.5rem;
+    }
+
+    .success-container > p {
+        width: 17rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 320px) {
+    .signup-option {
+        font-size: 0.6rem;
+        display: block;
+        margin: auto;
+        padding-top: 1rem;
+        max-width: 16rem;
+    }
+
+    .message-container > p {
+        width: 17rem;
+        margin-top: 0.5rem;
+    }
+
+    .success-container > p {
+        width: 17rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .signup-option {
+        font-size: 0.9rem;
+        display: block;
+        margin: auto;
+        padding-top: 2rem;
+        max-width: 21rem;
+    }
+
+    .message-container > p {
+        width: 25rem;
+        margin-top: 0.7rem;
+    }
+
+    .success-container > p {
+        width: 25rem;
+        margin-top: 0.7rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .signup-option {
+        font-size: 0.9rem;
+        display: block;
+        margin: auto;
+        padding-top: 2rem;
+        max-width: 23rem;
+    }
+    
+    .message-container > p {
+        width: 30rem;
+        margin-top: 1rem;
+    }
+
+    .success-container > p {
+        width: 30rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .signup-option {
+        font-size: 1rem;
+    }
+}
+
 /* Footer section*/
 
 footer {
@@ -329,6 +591,30 @@ footer {
     padding-right: 3rem;
     display: flex;
     justify-content: flex-end;
+}
+
+@media (max-width: 320px) {
+    footer {
+        font-size: 0.5rem;
+        height: 5rem;
+        padding-left: 2.5rem;
+        padding-top: 0.5rem;
+    }
+    
+    .credits > p > a {
+        font-size: 0.5rem;
+    }
+
+    .credits > p {
+        line-height: 0;
+    }
+
+    .deezer-logo {
+        height: 1.5rem;
+        width: auto;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+    }
 }
 
 @media (min-width: 320px) {
