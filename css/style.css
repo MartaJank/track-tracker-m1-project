@@ -154,6 +154,28 @@ main {
     color: white;
 }
 
+.message-container > p {
+    width: 25rem;
+    color: rgb(227, 34, 34);
+    text-align: center;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.success-container > p {
+    width: 25rem;
+    color: rgb(3, 221, 255);
+    text-align: center;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 footer {
     background-color: #242734;
     color: white;
