@@ -83,7 +83,12 @@ class Signup {
         successMsgP.innerHTML = 'You have successfully signed up!';
 
         this.successWrapper.appendChild(successMsgP);
+        this.redirect()
     }
+
+    redirect = () => {
+        setTimeout(() => location.assign('login.html'), 3000);
+      }
 
     removeMessages = () => {
         setTimeout( () => {
