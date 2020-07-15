@@ -1,0 +1,246 @@
+/* Nav Bar */
+
+nav {
+    background-color: #242734;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list > li {
+    list-style: none;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+    color: rgb(3, 221, 255);
+    text-decoration: none;
+}
+
+.logo-nav {
+    height: 5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@media (max-width: 320px) {
+    nav {
+        height: 4rem;
+    }
+
+    .logo-nav {
+        height: 100%;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 320px) {
+    nav {
+        height: 4rem;
+    }
+
+    .logo-nav {
+        height: 100%;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 400px) {
+    .logo-nav {
+        height: 4rem;
+        width: auto;
+        margin-left: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        height: 5rem;
+    }
+
+    .logo-nav {
+        height: 5rem;
+        width: auto;
+    }
+
+    .nav-list {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .nav-list > li {
+        list-style: none;
+        margin-right: 2rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    nav {
+        background-color: #242734;
+        height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-list {
+        width: 1000px;
+        padding-right: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .nav-list > li {
+        padding-left: 6rem;
+        padding-right: 0;
+        margin-right: 0;
+        margin-left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logo-nav {
+        height: 5rem;
+        margin-left: 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+/* burger */
+
+a {
+    color: white;
+  }
+
+a:hover {
+    color: rgb(3, 221, 255);
+}
+  
+  /* header */
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  .logo {
+    display: block;
+    float: left;
+    margin-left: 2rem;
+    width: 9rem;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: #242734;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }

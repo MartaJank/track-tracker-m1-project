@@ -13,7 +13,6 @@ let electronicButton = document.getElementById("electronic-button");
 let worldButton = document.getElementById("world-button");
 let whateverButton = document.getElementById("whatever-button");
 
-const selectedTracklists = [];
 
 let rockArray = ["https://api.deezer.com/genre/133/artists", "https://api.deezer.com/genre/152/artists", "https://api.deezer.com/genre/154/artists", "https://api.deezer.com/genre/156/artists", "https://api.deezer.com/genre/160/artists"];
 let metalArray = ["https://api.deezer.com/genre/155/artists", "https://api.deezer.com/genre/464/artists"];
@@ -28,108 +27,96 @@ let electronicArray = ["https://api.deezer.com/genre/106/artists", "https://api.
 let worldArray = ["https://api.deezer.com/genre/2/artists", "https://api.deezer.com/genre/16/artists", "https://api.deezer.com/genre/33/artists", "https://api.deezer.com/genre/35/artists", "https://api.deezer.com/genre/36/artists", "https://api.deezer.com/genre/37/artists", "https://api.deezer.com/genre/38/artists", "https://api.deezer.com/genre/42/artists", "https://api.deezer.com/genre/44/artists", "https://api.deezer.com/genre/48/artists", "https://api.deezer.com/genre/50/artists", "https://api.deezer.com/genre/58/artists", "https://api.deezer.com/genre/60/artists", "https://api.deezer.com/genre/67/artists", "https://api.deezer.com/genre/71/artists", "https://api.deezer.com/genre/73/artists", "https://api.deezer.com/genre/75/artists", "https://api.deezer.com/genre/81/artists", "https://api.deezer.com/genre/177/artists", "https://api.deezer.com/genre/178/artists"];
 let whateverArray = ["https://api.deezer.com/genre/0/artists"];
 
-redirectToSelection = () => {
+const redirectToSelection = () => {
     setTimeout(() => location.assign('randomsongs.html'), 1000);
   }
 
-async function fetchAll(array) {
-    const results = await Promise.all(array.map((url) => fetch(url).then((r) => r.json())
-    ));
-    return results;
-  }
-
-  let rockRandomArtist = fetchAll(rockArray)
-
-  var getMeRandomElements = function(array) {
-      var result = [];
-      for (var i = 0; i < 4; i++) {
-         result.push(array[Math.floor(Math.random()*array.length)]);
-      }
-      return result;
-  }
-
-  console.log(getMeRandomElements(rockRandomArtist));
-
-/*async function fetchAll(array) {
-    const results = await Promise.all(array.map((url) => fetch(url)
-    .then((r) => r.json())
-    .then(data => {
-        getArtists = [];
-        let allArtists = data.data[Math.floor(Math.random() * data.data.length)];
-        getArtists.push(allArtists);
-        getArtists.forEach((item) => getTracks(item))
+  const getArtists = (array) => {
+    let trackList = [];
+    Promise.all(array.map((url) => fetch(url).then((resp) => resp.json())))
+      .then((json) => {
+        //console.log(json);
+        return json;
+      })
+      .then((res) => {
+        return Promise.all(res.map((obj) => obj.data))
+       })
+          .then((arr) =>
+            //console.log(arr.flat())
+            arr.flat()
+          )
+          .then((res) => {
+            return Promise.all(res.map((obj) => obj.tracklist))
         })
-    ));
+              .then((arr) => {
+              //console.log(arr)
+              const randomLists = [];
+              for (let i = 0; i < 4; i++) {
+                let randomIndex = Math.floor(Math.random() * arr.length);
+                
+                let randomList = arr[randomIndex];
+                if (!randomLists.includes(randomList)) {
+                  randomLists.push(randomList)
+                }
+              }
+             //console.log(randomLists)
+              return Promise.all(randomLists.map((url) => fetch(url).then((resp) => resp.json())))
+        })
+      .then((res) => {
+        return Promise.all(res.map((obj) => obj.data))
+       })
+          .then((arr) =>
+            //console.log(arr.flat())
+            arr.flat()
+          )
+          .then((res) => {
+            return Promise.all(res.map((obj) => obj.id))
+        })
+    .then((arr) => {
+              //console.log(arr)
+              const randomTracks = [];
+              for (let i = 0; i < 4; i++) {
+                let randomIndex = Math.floor(Math.random() * arr.length);
+                
+                let randomId = arr[randomIndex];
+                if (!randomTracks.includes(randomId)) {
+                  randomTracks.push(randomId)
+                }
+              }
+      //console.log(randomTracks)
+      return randomTracks
+    })
+    .then((id) => { 
+        let ul = document.getElementById("songs-list");
+        ul.innerHTML = ""
+    
+        for (let y = 0; y <= randomTracks.length; y++) {
+           let trackIds = document.createElement("li"); 
+            trackIds.innerHTML = `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=${id}&app_id=1" width="300" height="300"></iframe>`
+            randomTracks.pop()
+            ul.appendChild(trackIds)
+        }
+          })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-
-function getTracks(item) {
-    fetch(array + item.tracklist)
-    .then(r => r.json())
-    .then(data => {
-        const tracks = data.data;
-        tracks.length = 4;
-        tracks.forEach(myTrack => {
-            selectedTracklists.push(myTrack.link.slice(29));
-            songsList.innerHTML = "";
-        })
-    })
-    .then (() => {
-        let finalList = document.querySelector(".songs-list");
-        finalList.innerHTML = "";
-        selectedTracklists.forEach(link => {
-            let songsList = document.createElement('li');
-            songsList.innerHTML = `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=${link}&app_id=1" width="300" height="300"></iframe>`;
-            selectedTracklists.pop();
-            finalList.appendChild(songsList);
-        })
-        redirectToSelection();
-    })
-    .catch(error => console.error(error));
-  };*/
+  //console.log(getArtists(rockArray));
 
 
-/*rockButton.addEventListener("click", function(){
-    fetchAll(rockArray[Math.floor(Math.random()*rockArray.length)]);
-});
-metalButton.addEventListener("click", function(){
-    fetchAll(metalArray[Math.floor(Math.random()*metalArray.length)])
-});
-reggaeButton.addEventListener("click", function(){
-    fetchAll(reggaeArray[Math.floor(Math.random()*reggaeArray.length)])
-});
-indieButton.addEventListener("click", function(){
-    fetchAll(indieArray[Math.floor(Math.random()*indieArray.length)])
-});
-classicalButton.addEventListener("click", function(){
-    fetchAll(classicalArray[Math.floor(Math.random()*classicalArray.length)])
-});
-rapButton.addEventListener("click", function(){
-    fetchAll(rapArray[Math.floor(Math.random()*rapArray.length)])
-});
-popButton.addEventListener("click", function(){
-    fetchAll(popArray[Math.floor(Math.random()*popArray.length)])
-});
-latinButton.addEventListener("click", function(){
-    fetchAll(latinArray[Math.floor(Math.random()*latinArray.length)])
-});
-jazzButton.addEventListener("click", function(){
-    fetchAll(jazzArray[Math.floor(Math.random()*jazzArray.length)])
-});
-electronicButton.addEventListener("click", function(){
-    fetchAll(electronicArray[Math.floor(Math.random()*electronicArray.length)])
-});
-worldButton.addEventListener("click", function(){
-    fetchAll(worldArray[Math.floor(Math.random()*worldArray.length)])
-});
-whateverButton.addEventListener("click", function(){
-    fetchAll(whateverArray[Math.floor(Math.random()*whateverArray.length)])
-});*/
 
-rockButton.addEventListener("click", function(){
-    redirectToSelection();
-    fetchAll(rockArray);
-});
-
+rockButton.addEventListener("click", redirectToSelection);
+metalButton.addEventListener("click", redirectToSelection);
+reggaeButton.addEventListener("click", redirectToSelection);
+indieButton.addEventListener("click", redirectToSelection);
+classicalButton.addEventListener("click", redirectToSelection);
+rapButton.addEventListener("click", redirectToSelection);
+popButton.addEventListener("click", redirectToSelection);
+latinButton.addEventListener("click", redirectToSelection);
+jazzButton.addEventListener("click", redirectToSelection);
+electronicButton.addEventListener("click", redirectToSelection);
+worldButton.addEventListener("click", redirectToSelection);
+whateverButton.addEventListener("click", redirectToSelection);
 
 
 

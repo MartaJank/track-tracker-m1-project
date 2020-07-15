@@ -6,27 +6,38 @@
         <title>Track Tracker</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/burger.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
-            <nav>
-              <div>
+          <nav class="header">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="Track Tracker Logo"></a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu nav-list">
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="login.html">Log In</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </nav>
+          <!--<nav>
+              <div class="nav-container">
                 <a href="index.html"><img src="img/logo.png" alt="Track Tracker Logo" class="logo-nav"></a>
                 <div>
-                  <div>
+                  <div class="burger-menu-icon">
                     <span></span>
                     <span></span>
                     <span></span>
                   </div>
                 </div>
               </div>
-              <ul class="nav-list">
+              <ul class="nav-list nav-menu hide-menu" id="nav-menu">
                 <li><a href="signup.html">Sign Up</a></li>
                 <li><a href="login.html">Log In</a></li>
                 <li><a href="faq.html">FAQ</a></li>
               </ul>
-            </nav>
+            </nav>-->
             
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
