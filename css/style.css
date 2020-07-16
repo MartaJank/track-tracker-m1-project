@@ -161,19 +161,16 @@ main {
 }
 
 .faq-play-button {
-    height: 10rem;
+    opacity: 1;
 }
 
 .faq-play-button:hover {
     opacity: 0;
-}
-.fade {
-    background: #1c1c1c;
-    opacity: 1;
     transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -webkit-transition: opacity 1s ease-in-out;
-  }
+}
+
 
   @media (max-width: 320px) {
     .faq-main {
@@ -234,17 +231,6 @@ main {
     .faq-play-button {
         height: 10rem;
     }
-
-    .faq-play-button:hover {
-        opacity: 0;
-    }
-    .fade {
-        background: #1c1c1c;
-        opacity: 1;
-        transition: opacity 1s ease-in-out;
-        -moz-transition: opacity 1s ease-in-out;
-        -webkit-transition: opacity 1s ease-in-out;
-      }
 }
 
 /* No bootstrap pages width */
