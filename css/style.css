@@ -160,8 +160,49 @@ main {
     color: rgb(3, 221, 255);
 }
 
+.faq-main {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.faq {
+    padding-bottom: 2rem;
+}
+
+
+.outer {
+    width: 70px;
+    height: 4rem;
+    overflow: hidden;
+    color: white;
+    border: 1px solid red;
+    transition: width 2s;
+}
+
+.button-play {
+  display:inline-block;
+  padding-bottom: 6rem;
+}
+
+.outer:hover {
+  width: 100%;
+  white-space: nowrap;
+}
+.outer .inner {
+  color: white;
+}
+
+.outer:hover .inner {
+  font-size: 15px;
+  color: white;
+  display:inline-block;
+  transition: font-size 0s 2s;
+}
+
+
 .faq-play-button {
     opacity: 1;
+    position: absolute;
 }
 
 .faq-play-button:hover {
@@ -175,6 +216,7 @@ main {
   @media (max-width: 320px) {
     .faq-main {
         height: 100%;
+
     }
 
     .question {
@@ -226,10 +268,15 @@ main {
     
     .question {
         font-size: 1.4rem;
+        padding-bottom: 2rem;
+    }
+
+    .faq {
+        padding-bottom: 5rem;
     }
 
     .faq-play-button {
-        height: 10rem;
+        height: 8rem;
     }
 }
 

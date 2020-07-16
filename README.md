@@ -2,6 +2,7 @@
 
 ![]()
 ​
+
 ## Description
 
 Tired of listening the same songs over and over again and want to find some new music but don't know how to search for it? With ***Track Tracker*** it's easier than you think! Now you can choose the music genre you want and get four random songs recommended to you. Not satisfied with the result? Don't worry, you can push the shuffle button as many times as you like and get four different songs every time. Or you can try with a different genre. Easy, isn't it? :smile:
@@ -55,8 +56,7 @@ The **MVP** will include:
 ​
 #### GitHub
 
-[Project GitHub](https://github.com/MartaJank/track-tracker-m1-project)
-​
+[Project GitHub](https://martajank.github.io/track-tracker-m1-project/index.html)
 
 #### Slides
 
