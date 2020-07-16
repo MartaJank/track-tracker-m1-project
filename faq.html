@@ -11,21 +11,24 @@
     </head>
     <body class="no-bootstrap">
         <header>
-            <nav id="hamnav">
-           
-                <!-- [THE HAMBURGER] -->
-                <label for="hamburger">&#9776;</label>
-                <input type="checkbox" id="hamburger"/>
-    
-                <!-- [MENU ITEMS] -->
-              <div class="nav-items">
-                <a href="index.html"><img src="img/logo.png" alt="Track Tracker Logo" class="logo-nav"></a>
-                <div id="hamitems">
-                  <a href="signup.html">Sign Up</a>
-                  <a href="login.html">Log In</a>
-                  <a href="faq.html">FAQ</a>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+                <div class="container-fluid">
+                  <a href="index.html" class="navbar-brand">
+                    <!-- Logo Image -->
+                    <img src="img/logo-big.png" alt="logo" class="logo-tt d-inline-block align-middle mr-2">
+          
+                  </a>
+        
+                  <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        
+                  <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item mr-lg-4"><a href="signup.html" class="nav-link">Sign Up <span class="sr-only">(current)</span></a></li>
+                      <li class="nav-item mr-lg-4"><a href="login.html" class="nav-link">Log In</a></li>
+                      <li class="nav-item mr-lg-4"><a href="faq.html" class="nav-link">FAQs</a></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
               </nav>
         </header>
         <main class="faq-main">
@@ -33,25 +36,23 @@
                 <h1 class="faq-title">FAQ</h1>
                 <div class="faq faq-left">
                     <h4 class="question">How many shuffles can I do?</h4>
-                    <div class="outer">
-                        <div class="button-play"><img src="img/play-button2.png" alt="play button" class="faq-play-button"></div>
-                        <div class="inner">You may notice that, if you have made many shuffles the songs stop appearing. You just need to wait a little and you'll be able to make more shuffles again!</div>
-                    </div>
+                    <img src="img/play-button2.png" alt="play button" class="faq-play-button">
+                    <p class="faq-txt">You may notice that, if you have made many shuffles the songs stop appearing. You just need to wait a little and you'll be able to make more shuffles again!</p>
                 </div>
                 <div class="faq faq-right">
                     <h4 class="question">What is the white message that appears on top of the songs I'm not listening to?</h4>
                     <img src="img/play-button2.png" alt="play button" class="faq-play-button">
-                    <p class="hoverable">Don't worry, it's just a little message reminding you that you can't listen to more than one song at once from a Deezer account. Just press the cross on the right corner and you'll able to listen to those songs too!</p>
+                    <p class="faq-txt">Don't worry, it's just a little message reminding you that you can't listen to more than one song at once from a Deezer account. Just press the cross on the right corner and you'll able to listen to those songs too!</p>
                 </div>
                 <div class="faq faq-left">
                     <h4 class="question">Can I add the songs I like to favorites?</h4>
                     <img src="img/play-button2.png" alt="play button" class="faq-play-button">
-                    <p class="hoverable">Sure! You just need press the heart below that song you love and it will add to your Deezer account favorites list. Just make sure you're logged on Deezer!</p>
+                    <p class="faq-txt">Sure! You just need press the heart below that song you love and it will add to your Deezer account favorites list. Just make sure you're logged on Deezer!</p>
                 </div>
                 <div class="faq faq-right">
                     <h4 class="question">What are the "Whatever" and "Around the World" genres?</h4>
                     <img src="img/play-button2.png" alt="play button" class="faq-play-button">
-                    <p class="hoverable">The "Whatever" genre is used usually when you're not into choosing any particular genre and you just want some random music. The "Around the World" genre is a compilation of songs from around the Globe, mainly in languages different than English so you can have some cultural boost too!</p>
+                    <p class="faq-txt">The "Whatever" genre is used usually when you're not into choosing any particular genre and you just want some random music. The "Around the World" genre is a compilation of songs from around the Globe, mainly in languages different than English so you can have some cultural boost too!</p>
                 </div>
             </article>
         </main>
