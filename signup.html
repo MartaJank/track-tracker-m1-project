@@ -11,24 +11,22 @@
     </head>
     <body class="no-bootstrap">
         <header>
-            <nav>
-                <div>
-                    <a href="index.html"><img src="img/logo.png" alt="Track Tracker Logo" class="logo-nav"></a>
-                    <div>
-                      <div class="burger-menu-icon" >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                    </div>
-                  </div>
-                  <ul class="nav-list">
-                    <li><a href="signup.html">Sign Up</a></li>
-                    <li><a href="login.html">Log In</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                  </ul>
-            </nav>
+            <nav id="hamnav">
+           
+                <!-- [THE HAMBURGER] -->
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger"/>
+    
+                <!-- [MENU ITEMS] -->
+              <div class="nav-items">
+                <a href="index.html"><img src="img/logo.png" alt="Track Tracker Logo" class="logo-nav"></a>
+                <div id="hamitems">
+                  <a href="signup.html">Sign Up</a>
+                  <a href="login.html">Log In</a>
+                  <a href="faq.html">FAQ</a>
+                </div>
+              </div>
+              </nav>
         </header>
         <main class="input-page">
             <img src="img/logo3.png" alt="Track Tracker Logo" class="logo-page">

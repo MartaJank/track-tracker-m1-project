@@ -11,33 +11,23 @@
     </head>
     <body>
         <header>
-          <nav class="header">
-            <a href="index.html" class="logo"><img src="img/logo.png" alt="Track Tracker Logo"></a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu nav-list">
-              <li><a href="signup.html">Sign Up</a></li>
-              <li><a href="login.html">Log In</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-            </ul>
+          <nav id="hamnav">
+           
+            <!-- [THE HAMBURGER] -->
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+
+            <!-- [MENU ITEMS] -->
+          <div class="nav-items">
+            <a href="index.html"><img src="img/logo.png" alt="Track Tracker Logo" class="logo-nav"></a>
+            <div id="hamitems">
+              <a href="signup.html">Sign Up</a>
+              <a href="login.html">Log In</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+          </div>
           </nav>
-          <!--<nav>
-              <div class="nav-container">
-                <a href="index.html"><img src="img/logo.png" alt="Track Tracker Logo" class="logo-nav"></a>
-                <div>
-                  <div class="burger-menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-              <ul class="nav-list nav-menu hide-menu" id="nav-menu">
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-              </ul>
-            </nav>-->
+          
             
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -68,18 +58,18 @@
             <article>
                 <h1>Choose your music genre and discover amazing songs!</h1>
                 <div class="genre-buttons-div">
-                  <button type="submit" class="genre-buttons" id="rock-button">Rock</button>
-                  <button type="submit" class="genre-buttons" id="metal-button">Metal</button>
-                  <button type="submit" class="genre-buttons" id="reggae-button">Reggae / Ska</button>
-                  <button type="submit" class="genre-buttons" id="indie-button">Indie / Alternative</button>
-                  <button type="submit" class="genre-buttons" id="classical-button">Classical Ambience Soundtrack</button>
-                  <button type="submit" class="genre-buttons" id="rap-button">Rap / Hip-Hop</button>
-                  <button type="submit" class="genre-buttons" id="pop-button">Pop / Dance</button>
-                  <button type="submit" class="genre-buttons" id="latin-button">Latin</button>
-                  <button type="submit" class="genre-buttons" id="jazz-button">Jazz / Blues</button>
-                  <button type="submit" class="genre-buttons" id="electronic-button">Electronic</button>
-                  <button type="submit" class="genre-buttons" id="world-button">Around the World</button>
-                  <button type="submit" class="genre-buttons" id="whatever-button">Whatever</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=rock';" type="submit" class="genre-buttons" id="rock-button">Rock</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=metal';" type="submit" class="genre-buttons" id="metal-button">Metal</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=reggae';" type="submit" class="genre-buttons" id="reggae-button">Reggae / Ska</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=indie';" type="submit" class="genre-buttons" id="indie-button">Indie / Alternative</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=classical';" type="submit" class="genre-buttons" id="classical-button">Classical Ambience Soundtrack</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=rap';" type="submit" class="genre-buttons" id="rap-button">Rap / Hip-Hop</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=pop';" type="submit" class="genre-buttons" id="pop-button">Pop / Dance</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=latin';" type="submit" class="genre-buttons" id="latin-button">Latin</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=jazz';" type="submit" class="genre-buttons" id="jazz-button">Jazz / Blues</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=electronic';" type="submit" class="genre-buttons" id="electronic-button">Electronic</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=world';" type="submit" class="genre-buttons" id="world-button">Around the World</button>
+                  <button onclick="location.href = 'randomsongs.html?genre=whatever';" type="submit" class="genre-buttons" id="whatever-button">Whatever</button>
                 </div>
             </article>
         </main>

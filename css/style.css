@@ -253,6 +253,29 @@ main {
     width: 100%;
 }
 
+/* random songs */
+.random-main {
+    min-height: 800px;
+    padding-top: 4rem;
+}
+
+.shuffle-button {
+    background-color: #1c1c1c;
+    border: 0;
+    height: 10rem;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    .shuffle-button {
+        height: 6rem;
+        width: auto;
+    }
+}
+
 /* Log In & Submit pages */
 
 .logo-page {
