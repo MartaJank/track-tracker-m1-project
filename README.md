@@ -2,8 +2,8 @@
 
 # Track Tracker - M1 Project
 
-![](/Users/luisderojas/Desktop/Ironhack related/Project 1/track-tracker-m1-project/track-tracker-m1-project/img/mm3617345.jpg)
-​
+![](https://drive.google.com/file/d/1PuDu_G52FOkgggiIntfgNqx6Jalu0TYU/view?usp=sharing)
+
 
 ## Description
 
@@ -24,8 +24,12 @@ The **MVP** will include:
 ​
 ## Backlog
 - Search bar for easy desired genre search with more specific genres than the ones displayed on the main page.
+
 - More strict password validation.
+
 - Add a Log Out option once the user is logged and say "Hi, ${name}" on the navbar instead of having still the Log In and Sign Up options displayed.
+
+  
 ## Wireframes
 - [My Wireframe](https://drive.google.com/file/d/1IyfzHvOrcgdNjPtlPb2Lvv9oifkwPITc/view?usp=sharing)
 - [Navigation / User Flow](https://drive.google.com/file/d/12K_FsgXLORPBLkXAlIjAHSUQFFXbL3KF/view?usp=sharing)
@@ -39,7 +43,7 @@ The **MVP** will include:
   - signup.html
   - **css/**
     - style.css
-    - Burger.css
+    - burger.css
   - **src/**
     - Main.js
     - Login.js
