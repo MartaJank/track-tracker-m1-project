@@ -21,9 +21,20 @@
   color: rgb(3, 221, 255) !important;
 }
 
+.navbar-toggler {
+  width: 5rem;
+}
+
 
 @media (max-width: 992px) {
+  
   .navbar-collapse{
     padding-left: 10px;
+    
   }
+  .navbar-toggler {
+    position: absolute !important;
+    right: 10px !important;
+    top: 14px !important;
+}
 }
