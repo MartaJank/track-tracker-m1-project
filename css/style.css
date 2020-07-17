@@ -556,6 +556,7 @@ input {
 
 .signup-link:hover {
     color: white;
+    text-decoration: none;
 }
 
 .message-container > p {
