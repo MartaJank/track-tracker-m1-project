@@ -364,10 +364,36 @@ main {
     margin-right: auto;
 }
 
+.randomp {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.randomlink {
+    display: flex;
+    justify-content: center;
+    color: rgb(3, 221, 255);
+}
+
+.randomlink:hover {
+    color: white;
+    text-decoration: none;
+}
+
 @media (max-width: 600px) {
     .shuffle-button {
         height: 6rem;
         width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .randomp {
+        font-size: 0.7rem;
+    }
+
+    .randomlink {
+        font-size: 0.7rem;
     }
 }
 

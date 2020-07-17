@@ -1,6 +1,8 @@
+
+
 # Track Tracker - M1 Project
 
-![]()
+![](/Users/luisderojas/Downloads/3617345.jpg)
 ​
 
 ## Description
@@ -21,9 +23,9 @@ The **MVP** will include:
 - **FAQ:** Everything you would want to know about ***Track Tracker***, just press play. :play_or_pause_button:
 ​
 ## Backlog
-- Fixed to top navbar that stays when you scroll.
-- Search bar for easy desired genre search.
-​
+- Search bar for easy desired genre search with more specific genres than the ones displayed on the main page.
+- More strict password validation.
+- Add a Log Out option once the user is logged and say "Hi, ${name}" on the navbar instead of having still the Log In and Sign Up options displayed.
 ## Wireframes
 - [My Wireframe](https://drive.google.com/file/d/1IyfzHvOrcgdNjPtlPb2Lvv9oifkwPITc/view?usp=sharing)
 - [Navigation / User Flow](https://drive.google.com/file/d/12K_FsgXLORPBLkXAlIjAHSUQFFXbL3KF/view?usp=sharing)
@@ -37,15 +39,16 @@ The **MVP** will include:
   - signup.html
   - **css/**
     - style.css
+    - Burger.css
   - **src/**
     - Main.js
     - Login.js
-    - deezerApi.js
+    - Database.js
     - Signup.js
     - User.js
     - Validator.js
-  - **img/**
-​
+- **img/**
+  ​
 ## API
 - Check out the amazing [Deezer](https://developers.deezer.com/api) API I used. :notes:
 ​
