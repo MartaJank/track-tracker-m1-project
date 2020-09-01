@@ -83,7 +83,7 @@ let whatever = ["https://api.deezer.com/genre/0/artists"];
     
         for (let y = 0; y < randomTracks.length; y++) {
            let trackIds = document.createElement("li"); 
-            trackIds.innerHTML = `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=false&width=600&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=${randomTracks[y]}&app_id=1" width="600" height="90"></iframe>`
+            trackIds.innerHTML = `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=${randomTracks[y]}&app_id=1" width="300" height="300"></iframe>`
             ul.appendChild(trackIds)
         }
           })
